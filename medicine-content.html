@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藥品資料</title>
+</head>
+
+<style>
+    .mt-30 {
+        margin-top: 30px;
+    }
+    
+    .row {
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    @media (max-width:748px) {
+        .row {
+            width: 90%;
+        }
+    }
+    /* Styles required only for the example above */
+    
+    .scrollspy-example {
+        position: relative;
+        height: 400px;
+        overflow: auto;
+    }
+    
+    .nav li {
+        list-style: none;
+        display: inline;
+    }
+    
+    .nav {
+        padding-left: 0px;
+    }
+    
+    .nav a {
+        text-decoration: none;
+        color: #566f31;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="col-lg-12 mt-30">
+            <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614825067.0277.jpg" width="250px">
+        </div>
+        <div class="col-md-12">
+            <!-- Scrollspy -->
+            <div id="scrollspy" class="sticky-top">
+                <ul class="nav flex-column nav-pills menu-sidebar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example-1">中文品名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example-2">英文品名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example-3">適應症</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example-4">劑型</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example-5">使用方法</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Scrollspy -->
+        </div>
+        <div class="col-md-12">
+            <!-- Spied element -->
+            <div data-mdb-spy="scroll" data-mdb-target="#scrollspy" data-mdb-offset="0" class="scrollspy-example">
+                <section id="example-1">
+                    <h3>中文品名</h3>
+                    "瑞士"紅黴素膠囊250毫克
+                </section>
+                <section id="example-2">
+                    <h3>英文品名</h3>
+                    HYLOMYCIN CAPSULES 250MG "SWISS"
+                </section>
+                <section id="example-3">
+                    <h3>適應症</h3>
+                    炎症、膿腫症、阿米巴痢、淋病、梅毒。
+                </section>
+                <section id="example-4">
+                    <h3>劑型</h3>
+                    膠囊劑
+                </section>
+                <section id="example-5">
+                    <h3>使用方法</h3>
+                    請遵照醫師囑使用，本藥通常一天服用一次於早餐後服用，或一天服用兩次， 分別於早餐後及傍晚時服用。
+                </section>
+            </div>
+            <!-- Spied element -->
+        </div>
+
+
+    </div>
+</body>
+
+</html>

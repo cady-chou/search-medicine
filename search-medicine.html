@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查藥品首頁</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<style>
+    a {
+        color: #566f31;
+    }
+    
+    a:hover {
+        color: #19431E;
+    }
+    
+    .mb-32 {
+        margin-bottom: 32px;
+    }
+    
+    .mt-80 {
+        margin-top: -80px;
+    }
+    
+    .medicine-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .row {
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    @media (max-width:748px) {
+        .row {
+            width: 100%;
+        }
+    }
+    
+    .top-img {
+        background-image: url('https://heho.com.tw/wp-content/uploads/2021/03/1614742822.624.png');
+        width: 100%;
+        height: 330px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    @media (min-width:1700px) {
+        .top-img {
+            height: 450px;
+        }
+    }
+    
+    @media (max-width:990px) {
+        .top-img {
+            height: 245px;
+        }
+    }
+    
+    @media (max-width:769px) {
+        .top-img {
+            height: 200px;
+        }
+    }
+    
+    @media (max-width:440px) {
+        .top-img {
+            background-image: url('https://heho.com.tw/wp-content/uploads/2021/03/1614743834.3194.png');
+        }
+    }
+    
+    .btn-outline-success {
+        color: #fff;
+        border-color: #566f31;
+        background-color: #566f31;
+    }
+    
+    .btn-outline-success:hover {
+        color: #19431E;
+        border-color: #19431E;
+    }
+    
+    .btn-outline-success:hover,
+    .btn-outline-success:focus,
+    .btn-outline-success:active {
+        background-color: #fff;
+    }
+    
+    .btn-info {
+        background-color: #566f31;
+    }
+    
+    .btn-info:hover,
+    .btn-info:focus,
+    .btn-info:active {
+        background-color: #19431E;
+    }
+    
+    .symptom-style {
+        border: 2px solid #cccccc;
+        height: 100px;
+    }
+    
+    .card {
+        box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+    }
+    
+    [class*=btn-outline-] {
+        padding: 0.5rem 1.375rem 0.300rem;
+    }
+    
+    .form-outline .form-helper {
+        font-size: 0.95em;
+    }
+</style>
+
+<body>
+    <div class="top-img"></div>
+    <div class=" medicine-box ">
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <!-- Search form -->
+                <form class="d-flex input-group w-auto mb-32 mt-80 ">
+                    <input type="search " class="form-control " placeholder="快速搜尋（藥品名稱） " aria-label="Search " />
+                    <button class="btn btn-outline-success" type="button " data-mdb-ripple-color="dark ">搜尋</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <div class="form-outline mb-32 ">
+                    <input type="text " id="typeText " class="form-control " />
+                    <label class="form-label " for="typeText ">藥品商品名(中/英)</label>
+                    <div class="form-helper ">範例：來適泄錠</div>
+                </div>
+                <div class="form-outline mb-32 ">
+                    <input type="text " id="typeText " class="form-control " />
+                    <label class="form-label " for="typeText ">成分</label>
+                    <div class="form-helper ">範例：FUROSEMIDE</div>
+                </div>
+                <div class="form-outline mb-32 ">
+                    <input type="text " id="typeText " class="form-control " />
+                    <label class="form-label " for="typeText ">藥品顏色</label>
+                    <div class="form-helper ">範例：白色</div>
+                </div>
+                <div class="form-outline mb-32 ">
+                    <select class="form-control " id="typeText " name="medicine-style ">
+                        　<option value="medicine-0 ">藥品形狀</option>
+                        　<option value="medicine-1 ">01圓扁形</option>
+                        　<option value="medicine-2 ">02圓凸形</option>
+                        　<option value="medicine-3 ">03橢圓形</option>
+                        　<option value="medicine-4 ">04長圓柱形</option>
+                        　<option value="medicine-5 ">05三角形</option>
+                        　<option value="medicine-6 ">06四方形</option>
+                        　<option value="medicine-7 ">07菱形</option>
+                        　<option value="medicine-8 ">08長方形</option>
+                        　<option value="medicine-9 ">09五邊形</option>
+                        　<option value="medicine-10 ">10六邊形</option>
+                        　<option value="medicine-11 ">11八邊形</option>
+                        　<option value="medicine-12 ">12其他不規則形</option>
+                    </select>
+                    <label class="form-label " for="typeText "></label>
+                </div>
+
+            </div>
+            <p>使用說明：當您不確定所要查詢的字串全名時，可輸入部分字串，即可查到符合此部分字串的所有資料。 例如：膠囊可查到 “ 膠囊劑 ” 的相關資料。</p>
+            <p>資料來源：衛生福利部中央健康保險署、衛福部食品藥物管理署</p>
+            <div style="text-align: center; ">
+                <input type="submit " value="搜尋 " class="btn btn-info btn-rounded ">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-32">
+                    <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614760691.5209.png" style="width: 60px;padding: 10px 10px 0 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">常見熱門症狀</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#" class="card-link">頭痛</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">咳嗽</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">喉嚨痛</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-32">
+                    <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614760694.5372.png" style="width: 60px;padding: 10px 10px 0 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">耳鼻喉科</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#" class="card-link">流鼻水</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">鼻塞</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">乾眼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-32">
+                    <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614760697.6857.png" style="width: 60px;padding: 10px 10px 0 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">內科</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#" class="card-link">高血壓</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">消化不良</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">便秘</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-4 symptom-style ">常見熱門症狀</div>
+            <div class="col-lg-4 symptom-style" style="border:2px solid #cccccc;height: 100px;">耳鼻喉科</div>
+            <div class="col-lg-4 symptom-style" style="border:2px solid #cccccc;height: 100px;">內外科</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 symptom-style" style="border:2px solid #cccccc;height: 100px;">皮膚科</div>
+            <div class="col-lg-4 symptom-style" style="border:2px solid #cccccc;height: 100px;">其他</div>
+            <div class="col-lg-4 symptom-style" style="border:2px solid #cccccc;height: 100px;">6</div>
+        </div> -->
+
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-32">
+                    <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614760697.6857.png" style="width: 60px;padding: 10px 10px 0 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">外科</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#" class="card-link">胸痛</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">腹痛</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">腰痛</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-32">
+                    <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614760691.5209.png" style="width: 60px;padding: 10px 10px 0 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">皮膚科</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#" class="card-link">痘痘</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">灰指甲</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">雞眼</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-32">
+                    <img src="https://heho.com.tw/wp-content/uploads/2021/03/1614760691.5209.png" style="width: 60px;padding: 10px 10px 0 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">其他</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#" class="card-link">陰道分泌物</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">痔瘡</a></li>
+                        <li class="list-group-item"><a href="#" class="card-link">更年期</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>
+<!-- MDB -->
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js "></script>
+
+</html>
